@@ -203,6 +203,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Category.cs">
+      <DependentUpon>NorthWindModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\NorthWindModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -220,6 +223,9 @@
       <DependentUpon>NorthWindModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Product.cs">
+      <DependentUpon>NorthWindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Supplier.cs">
       <DependentUpon>NorthWindModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -240,6 +246,12 @@
     <Content Include="Views\CtoV\DemoViewData.cshtml" />
     <Content Include="Views\CtoV\DemoViewBag.cshtml" />
     <Content Include="Views\CtoV\DemoVDModel.cshtml" />
+    <Content Include="Views\CtoV\DemoStronglytyped.cshtml" />
+    <Content Include="Views\CtoV\DemoInput.cshtml" />
+    <Content Include="Views\CtoV\CheckInput.cshtml" />
+    <Content Include="Views\CtoV\DemoInclude.cshtml" />
+    <Content Include="Views\CtoV\DemoSelectList.cshtml" />
+    <Content Include="Views\CtoV\DemoMultiModelObject.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
