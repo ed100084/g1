@@ -1,0 +1,16 @@
+﻿@using WebApplication6.Models;
+@{
+    ViewBag.Title = "DemoVDModel";
+    
+}
+
+<h2>DemoVDModel</h2>
+
+<ul>
+    @foreach (var item in ViewBag.Products as List<Product>)
+    {
+        <li>
+            @item.ProductName
+        </li>
+    }
+</ul>

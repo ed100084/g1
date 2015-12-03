@@ -104,6 +104,12 @@ namespace WebApplication6.Controllers
             return View(product);
         }
 
+        public ActionResult DemoScaffoldList()
+        {
+            return View(db.Products.ToList());
+        }
+
+
         // POST: Products/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

@@ -196,6 +196,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="ChatHub.cs" />
     <Compile Include="Controllers\CRUDController.cs" />
+    <Compile Include="Controllers\CtoVController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\SendMessageController.cs" />
@@ -235,6 +236,10 @@
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Products\DemoScaffoldList.cshtml" />
+    <Content Include="Views\CtoV\DemoViewData.cshtml" />
+    <Content Include="Views\CtoV\DemoViewBag.cshtml" />
+    <Content Include="Views\CtoV\DemoVDModel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
