@@ -30,6 +30,6 @@
 
         //$window.jQuery.connection.hub.url = $rootScope.SignalRUrl;
         //$scope.chatHub = jQuery.connection.sendMessage;
-        
+        //ver2
     })
 }());
