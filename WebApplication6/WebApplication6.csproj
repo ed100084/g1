@@ -156,6 +156,15 @@
       <DependentUpon>NorthWindModel.edmx</DependentUpon>
       <LastGenOutput>NorthWindModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\TextTemplate1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TextTemplate1.txt</LastGenOutput>
+    </Content>
+    <Content Include="Models\TextTemplate1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TextTemplate1.tt</DependentUpon>
+    </Content>
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
@@ -198,6 +207,7 @@
     <Compile Include="Controllers\CRUDController.cs" />
     <Compile Include="Controllers\CtoVController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\ModelBinderController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\SendMessageController.cs" />
     <Compile Include="Controllers\VtoCController.cs" />
@@ -223,6 +233,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NorthWindModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Partials\Product.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Product.cs">
       <DependentUpon>NorthWindModel.tt</DependentUpon>
@@ -268,6 +279,8 @@
     <Content Include="Views\VtoC\MultiPersonModelBinding.cshtml" />
     <Content Include="Views\VtoC\ViewModelBinding.cshtml" />
     <Content Include="Views\VtoC\ShowViewModelModelBinding.cshtml" />
+    <Content Include="Views\ModelBinder\Index.cshtml" />
+    <Content Include="Views\ModelBinder\Test.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

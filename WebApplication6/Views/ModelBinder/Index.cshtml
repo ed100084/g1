@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Test", "ModelBinder"))
+{
+    <div>
+        <span>Total:</span>
+        @Html.TextBox("amount")
+    </div>
+    <input type="submit" value="ok" />
+}
