@@ -228,6 +228,7 @@
     <Compile Include="Models\Supplier.cs">
       <DependentUpon>NorthWindModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModels\ProductCategoryViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -252,6 +253,7 @@
     <Content Include="Views\CtoV\DemoInclude.cshtml" />
     <Content Include="Views\CtoV\DemoSelectList.cshtml" />
     <Content Include="Views\CtoV\DemoMultiModelObject.cshtml" />
+    <Content Include="Views\CtoV\DemoViewModel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

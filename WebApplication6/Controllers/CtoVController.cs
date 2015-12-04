@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using WebApplication6.Models;
 using System.Data.Entity;
+using WebApplication6.Models.ViewModels;
 
 namespace WebApplication6.Controllers
 {
@@ -82,6 +83,17 @@ namespace WebApplication6.Controllers
             ViewBag.Product = (from p in db.Products select p).Take(10).ToList();
             ViewBag.Category = (from c in db.Categories select c).Take(10).ToList();
             return View();
+        }
+
+        public ActionResult DemoViewModel()
+        {
+            return View(new ProductCategoryViewModel()
+            {
+                Name = "B34",
+                Book = "Book34",
+                Product = (from p in db.Products select p).Take(10).ToList(),
+                Category = (from c in db.Categories select c).Take(10).ToList()
+            });
         }
 
         protected override void Dispose(bool disposing)
