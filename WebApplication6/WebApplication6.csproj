@@ -254,6 +254,8 @@
     <Content Include="Views\CtoV\DemoSelectList.cshtml" />
     <Content Include="Views\CtoV\DemoMultiModelObject.cshtml" />
     <Content Include="Views\CtoV\DemoViewModel.cshtml" />
+    <Content Include="Views\CtoV\DemoTuple.cshtml" />
+    <Content Include="Views\CtoV\DemoQueryString.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -7,10 +7,12 @@ using WebApplication6.Models;
 using System.Data.Entity;
 using WebApplication6.Models.ViewModels;
 
+
 namespace WebApplication6.Controllers
 {
     public class CtoVController : Controller
     {
+        
         private NorthwindEntities db = new NorthwindEntities();
 
         // GET: CtoV
@@ -94,6 +96,22 @@ namespace WebApplication6.Controllers
                 Product = (from p in db.Products select p).Take(10).ToList(),
                 Category = (from c in db.Categories select c).Take(10).ToList()
             });
+        }
+
+        public ActionResult DemoTuple()
+        {
+            var products = db.Products.ToList();
+            var catedories = db.Categories.ToList();
+            var suplliers = db.Suppliers.ToList();
+            var tupleModel = new Tuple<List<Product>, List<Category>, List<Supplier>>
+                (products, catedories, suplliers);
+            return View(tupleModel);
+        }
+
+        public ActionResult DemoQueryString()
+        {
+            ViewBag.id = int.Parse(Request.QueryString["id"]);
+            return View();
         }
 
         protected override void Dispose(bool disposing)
