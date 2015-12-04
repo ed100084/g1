@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication6.Models;
+using WebApplication6.Models.ViewModels;
 
 namespace WebApplication6.Controllers
 {
@@ -58,6 +59,17 @@ namespace WebApplication6.Controllers
             ViewBag.WomanName = woman.Name;
             ViewBag.WomanAge = woman.Age;
             return View();
+        }
+
+        public ActionResult ViewModelBinding()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ViewModelBinding(PersonViewModel person)
+        {
+            return View("ShowViewModelModelBinding", person);
         }
     }
 }

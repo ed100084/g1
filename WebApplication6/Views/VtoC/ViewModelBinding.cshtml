@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "ViewModelBinding";
+}
+
+<h2>ViewModelBinding</h2>
+
+<div>
+    @using (Html.BeginForm())
+    {
+        <p>MAN</p>
+        <p>
+            NAME:<input type="text" name="person.man.name" /><br />
+            AGE:<input type="text" name="person.man.age" /><br />        
+        </p>
+        <p>WOMAN</p>
+        <p>
+            NAME:<input type="text" name="person.woman.name" /><br />
+            AGE:<input type="text" name="person.woman.age" /><br />
+        </p>
+        <input type="submit" value="SUBMIT" />
+    }
+</div>
+
