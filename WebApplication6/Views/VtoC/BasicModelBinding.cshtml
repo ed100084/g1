@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "BasicModelBinding";
+}
+
+<h2>BasicModelBinding</h2>
+
+<div>
+    @using (Html.BeginForm())
+    {
+        <p>
+            Name:<input type="text" name="name"/>
+            <input type="submit" value="submit!"/>
+        </p>
+    }
+</div>
+<p>
+    Your name:@ViewBag.Name
+</p>

@@ -200,6 +200,7 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\SendMessageController.cs" />
+    <Compile Include="Controllers\VtoCController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -256,6 +257,10 @@
     <Content Include="Views\CtoV\DemoViewModel.cshtml" />
     <Content Include="Views\CtoV\DemoTuple.cshtml" />
     <Content Include="Views\CtoV\DemoQueryString.cshtml" />
+    <Content Include="Views\VtoC\DemoQueryString.cshtml" />
+    <Content Include="Views\VtoC\DemoRouteData.cshtml" />
+    <Content Include="Views\VtoC\BasicModelBinding.cshtml" />
+    <Content Include="Views\VtoC\BasicModelBingingByModel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
