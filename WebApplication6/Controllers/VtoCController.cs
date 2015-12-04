@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication6.Models;
 
 namespace WebApplication6.Controllers
 {
@@ -36,6 +37,27 @@ namespace WebApplication6.Controllers
         {
             ViewBag.Model = name;
             return View(); 
+        }
+
+        public ActionResult DemoFormCollection(FormCollection form)
+        {
+            ViewBag.Name = form["name"];
+            ViewBag.Age = form["age"];
+            return View();
+        }
+
+        public ActionResult PersonModelBinding(Person person)
+        {
+            return View(person);
+        }
+
+        public ActionResult MultiPersonModelBinding(Person man, Person woman)
+        {
+            ViewBag.ManName = man.Name;
+            ViewBag.ManAge = man.Age;
+            ViewBag.WomanName = woman.Name;
+            ViewBag.WomanAge = woman.Age;
+            return View();
         }
     }
 }

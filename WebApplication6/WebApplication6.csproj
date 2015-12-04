@@ -223,6 +223,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NorthWindModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Product.cs">
       <DependentUpon>NorthWindModel.tt</DependentUpon>
     </Compile>
@@ -261,6 +262,9 @@
     <Content Include="Views\VtoC\DemoRouteData.cshtml" />
     <Content Include="Views\VtoC\BasicModelBinding.cshtml" />
     <Content Include="Views\VtoC\BasicModelBingingByModel.cshtml" />
+    <Content Include="Views\VtoC\DemoFormCollection.cshtml" />
+    <Content Include="Views\VtoC\PersonModelBinding.cshtml" />
+    <Content Include="Views\VtoC\MultiPersonModelBinding.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
