@@ -1,8 +1,12 @@
-﻿@model IEnumerable<WebApplication6.Models.Product>
+﻿@model IPagedList<WebApplication6.Models.Product>
+@using PagedList.Mvc;
+@using PagedList;
 
 @{
     ViewBag.Title = "Index";
 }
+
+
 
 <h2>Index</h2>
 
@@ -12,31 +16,31 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ProductName)
+            @Html.DisplayNameFor(model => model.FirstOrDefault().ProductName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SupplierID)
+            @Html.DisplayNameFor(model => model.FirstOrDefault().SupplierID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CategoryID)
+            @Html.DisplayNameFor(model => model.FirstOrDefault().CategoryID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.QuantityPerUnit)
+            @Html.DisplayNameFor(model => model.FirstOrDefault().QuantityPerUnit)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.UnitPrice)
+            @Html.DisplayNameFor(model => model.FirstOrDefault().UnitPrice)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.UnitsInStock)
+            @Html.DisplayNameFor(model => model.FirstOrDefault().UnitsInStock)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.UnitsOnOrder)
+            @Html.DisplayNameFor(model => model.FirstOrDefault().UnitsOnOrder)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ReorderLevel)
+            @Html.DisplayNameFor(model => model.FirstOrDefault().ReorderLevel)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Discontinued)
+            @Html.DisplayNameFor(model => model.FirstOrDefault().Discontinued)
         </th>
         <th></th>
     </tr>
@@ -79,3 +83,5 @@
 }
 
 </table>
+
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))

@@ -7,17 +7,23 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication6.Models;
+using PagedList;
 
 namespace WebApplication6.Controllers
 {
     public class ProductsController : Controller
     {
         private NorthwindEntities db = new NorthwindEntities();
+        private int pageSize = 10;
 
         // GET: Products
-        public ActionResult Index()
+        public ActionResult Index(int page=1)
         {
-            return View(db.Products.ToList());
+            int currentPage = page < 1 ? 1 : page;
+            var products = db.Products.OrderBy(x => x.ProductID);
+            var result = products.ToPagedList(currentPage, pageSize);
+            return View(result);
+            //return View(db.Products.ToList());
         }
 
         // GET: Products/Details/5
